@@ -19,11 +19,14 @@ export default function Home() {
 
       const data = await response.json();
       if (response.status !== 200) {
-        throw data.error || new Error(`Request failed with status ${response.status}`);
+        throw (
+          data.error ||
+          new Error(`Request failed with status ${response.status}`)
+        );
       }
 
       setResult(data.result);
-    } catch(error) {
+    } catch (error) {
       // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
@@ -41,7 +44,7 @@ export default function Home() {
         <img src="/boat.png" className={styles.icon} />
         <h3>Name my boat</h3>
         <form onSubmit={onSubmit}>
-          <h4> Enter words to inspire your boat's name  </h4>
+          <h4> Enter words to inspire your boat's name </h4>
           <input
             type="text"
             name="boat"
@@ -51,6 +54,8 @@ export default function Home() {
           />
           <input type="submit" value="Generate names" />
         </form>
+        <br />
+        {result ? <b style={{color: "gray"}}> Results </b> : ""}
         <div className={styles.result}>{result}</div>
       </main>
     </div>
