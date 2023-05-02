@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [animalInput, setAnimalInput] = useState("");
+  const [boatInput, setBoatInput] = useState("");
   const [result, setResult] = useState();
 
   async function onSubmit(event) {
@@ -14,7 +14,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ animal: animalInput }),
+        body: JSON.stringify({ boat: boatInput }),
       });
 
       const data = await response.json();
@@ -23,7 +23,7 @@ export default function Home() {
       }
 
       setResult(data.result);
-      setAnimalInput("");
+      setBoatInput("");
     } catch(error) {
       // Consider implementing your own error handling logic here
       console.error(error);
@@ -34,20 +34,21 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Quickstart</title>
-        <link rel="icon" href="/dog.png" />
+        <title>Name my boat</title>
+        <link rel="icon" href="/boat.png" />
       </Head>
 
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <img src="/boat.png" className={styles.icon} />
+        <h3>Name my boat</h3>
         <form onSubmit={onSubmit}>
+          <h4> Enter words to inspire your boat's name  </h4>
           <input
             type="text"
-            name="animal"
-            placeholder="Enter an animal"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
+            name="boat"
+            placeholder="Words to describe your boat's name"
+            value={boatInput}
+            onChange={(e) => setBoatInput(e.target.value)}
           />
           <input type="submit" value="Generate names" />
         </form>
