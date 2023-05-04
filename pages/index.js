@@ -48,7 +48,7 @@ export default function Home() {
           <input
             type="text"
             name="boat"
-            placeholder="The theme of your boat's name"
+            placeholder="The theme of your boat's name "
             value={boatInput}
             onChange={(e) => setBoatInput(e.target.value)}
           />
