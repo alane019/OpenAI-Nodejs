@@ -24,7 +24,7 @@ export default function Home() {
           new Error(`Request failed with status ${response.status}`)
         );
       }
-
+    console.log(response)
       setResult(data.result);
     } catch (error) {
       // Consider implementing your own error handling logic here
@@ -48,7 +48,7 @@ export default function Home() {
           <input
             type="text"
             name="boat"
-            placeholder="Words to describe your boat's name"
+            placeholder="The theme of your boat's name"
             value={boatInput}
             onChange={(e) => setBoatInput(e.target.value)}
           />
