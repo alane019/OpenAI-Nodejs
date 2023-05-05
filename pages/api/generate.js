@@ -5,7 +5,6 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
@@ -32,7 +31,7 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: generatePrompt(boat),
-      temperature: 0.6,
+      temperature: 1.1,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {
@@ -52,14 +51,24 @@ export default async function (req, res) {
 }
 
 function generatePrompt(boat) {
-  const capitalizedBoat =
-    boat[0].toUpperCase() + boat.slice(1).toLowerCase();
+  const capitalizedBoat = boat
   return `Suggest three names for a boat.
 
-Boat name inspiration: Cat
-Names: Captain Sharpclaw,  Agent Fluffball,  The Incredible Feline
 Boat name inspiration: Dog
-Names:  Ruff the Protector,  Wonder Canine,  Sir Barks-a-Lot
-Boat name inspiration: ${capitalizedBoat}
+Names:  Woof Waverider, Pawsome, Sir Barks-a-Lot
+
+Boat name inspiration: Cat
+Names: Purry Pirate, Cheshire Cruiser, Meowy Maritime
+
+Boat name inspiration: Dinosaur
+Names: Brontosaurus Breeze, Jurassic Cruiser, Prehistoric Prowler
+
+Boat name inspiration: Shark
+Names: Great White Glider, Hammerhead Hunter, Fin Frenzy
+
+Boat name inspiration: Ninja
+Names: Shadow Stealth, Silent Striker, Ninja Navigator
+
+Boat name inspiration: ${boat}
 Names:`;
 }
