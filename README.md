@@ -45,16 +45,12 @@ npm run dev
 - [NodeJS](https://nodejs.org/) -  JavaScript runtime
 - [ReactJS](https://reactjs.org/) - JavaScript UI library
 - [Next.js](https://nextjs.org/) - Promise based HTTP client
+- [OpenAI Text-Davinci-003](https://platform.openai.com/docs/models/gpt-3-5) - OpenAI GPT-3.5 model
 
 ----------------
 ##  Contributing <a name = "contributing"></a>
 
 Open source contributions are always welcome. Submit a pull request or an issue if you would like to contribute or request improvements.
-
-
-<br/>
-
-
 
 ----------- 
 ## Github Link <a name = "#github_link"> </a>
