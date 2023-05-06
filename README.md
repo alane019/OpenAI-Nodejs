@@ -4,7 +4,7 @@
 
 Uses Text-Davinci-003 ([an OpenAI GPT-3.5 model](https://platform.openai.com/docs/models/gpt-3-5)) to suggest names for a boat based on user input. User provides a word or words which provides an overall theme for the AI to suggest names. 
 
-This project uses [OpenAI's API Quickstart project](https://github.com/alane019/OpenAI-Nodejs) for Node.js. 
+This project uses [OpenAI's API Quickstart project](https://github.com/openai/openai-quickstart-node) for Node.js. 
 
 Deployed to Vercel: 
 https://openai-text-davinci-003.vercel.app/
