@@ -1,41 +1,64 @@
-# OpenAI API Quickstart - Node.js example app
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
+# Name My Boat
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-## Setup
+Uses Text-Davinci-003 ([an OpenAI GPT-3.5 model](https://platform.openai.com/docs/models/gpt-3-5)) to suggest names for a boat based on user input. User provides a word or words which provides an overall theme for the AI to suggest names. 
 
-1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) (Node.js version >= 14.6.0 required)
+This project uses [OpenAI's API Quickstart project](https://github.com/alane019/OpenAI-Nodejs) for Node.js. 
 
-2. Clone this repository
+Deployed to Vercel: 
+https://openai-text-davinci-003.vercel.app/
 
-3. Navigate into the project directory
+![App Screenshot](./public/screenshot.jpg)
 
-   ```bash
-   $ cd openai-quickstart-node
-   ```
+- [Name My Boat](#name-my-boat)
+  - [Getting Started ](#getting-started-)
+  - [Start the Application  ](#start-the-application--)
+  - [Technologies Used  ](#technologies-used--)
+  - [Contributing ](#contributing-)
+  - [Github Link  ](#github-link--)
 
-4. Install the requirements
+---
 
-   ```bash
-   $ npm install
-   ```
+##  Getting Started <a name = "environment_setup"></a>
 
-5. Make a copy of the example environment variables file
+  To run this application in your own development environment, install [NodeJs](https://nodejs.org/). This repository was developed using [Visual Studio Code](https://code.visualstudio.com/).
+  
+  You will need to create an OpenAI account and [create your own API key](https://platform.openai.com/account/api-keys)
 
-   On Linux systems: 
-   ```bash
-   $ cp .env.example .env
-   ```
-   On Windows:
-   ```powershell
-   $ copy .env.example .env
-   ```
-6. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file
+----
+## Start the Application  <a name = "start"></a>
 
-7. Run the app
+ Install all node package dependencies listed in the package.json file using the following command in your terminal, in the directory of the project:
 
-   ```bash
-   $ npm run dev
-   ```
+```
+npm install
+```
 
-You should now be able to access the app at [http://localhost:3000](http://localhost:3000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).
+After all packages have been installed, you can run a development version of the application in your web browser on localhost using this command:
+
+```
+npm run dev
+```
+
+##  Technologies Used  <a name = "tech_stack"></a>
+- [NodeJS](https://nodejs.org/) -  JavaScript runtime
+- [ReactJS](https://reactjs.org/) - JavaScript UI library
+- [Next.js](https://nextjs.org/) - Promise based HTTP client
+
+----------------
+##  Contributing <a name = "contributing"></a>
+
+Open source contributions are always welcome. Submit a pull request or an issue if you would like to contribute or request improvements.
+
+
+<br/>
+
+
+
+----------- 
+## Github Link <a name = "#github_link"> </a>
+[ https://github.com/alane019/OpenAI-Nodejs ](https://github.com/alane019/OpenAI-Nodejs)
+
+
+--------------
