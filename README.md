@@ -42,8 +42,8 @@ npm run dev
 ```
 
 ##  Technologies Used  <a name = "tech_stack"></a>
-- [NodeJS](https://nodejs.org/) -  JavaScript runtime
-- [ReactJS](https://reactjs.org/) - JavaScript UI library
+- [Node.js](https://nodejs.org/) -  JavaScript runtime
+- [React](https://reactjs.org/) - JavaScript UI library
 - [Next.js](https://nextjs.org/) - Promise based HTTP client
 - [OpenAI Text-Davinci-003](https://platform.openai.com/docs/models/gpt-3-5) - OpenAI GPT-3.5 model
 
