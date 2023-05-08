@@ -24,10 +24,8 @@ export default function Home() {
           new Error(`Request failed with status ${response.status}`)
         );
       }
-    console.log(response)
       setResult(data.result);
     } catch (error) {
-      // Consider implementing your own error handling logic here
       console.error(error);
       alert(error.message);
     }
@@ -55,8 +53,21 @@ export default function Home() {
           <input type="submit" value="Generate names" />
         </form>
         <br />
-        {result ? <b style={{color: "gray"}}> Results </b> : ""}
+        {result ? <b style={{ color: "gray" }}> Results </b> : ""}
         <div className={styles.result}>{result}</div>
+        <br/><br/>
+        <div>
+        View on {" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link"
+            href="https://github.com/alane019/OpenAI-Nodejs"
+          >
+             Github
+          </a>
+          .
+        </div>
       </main>
     </div>
   );
